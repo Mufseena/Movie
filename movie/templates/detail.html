@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container"><br>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{task4.image.url}}" height="400px" width="250px">
+        </div>
+        <div class="col-md-6">
+            <h2>{{task4.name}}</h2><br>
+            <h6>{{task4.desc}}</h6> <br>
+            <a href="{% url 'task4_app:edit' task4.id %}" class="btn btn-dark">Update</a>
+            <a href="{% url 'task4_app:delete' task4.id %}" class="btn btn-danger">Delete</a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

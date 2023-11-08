@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+   <div class="row">
+
+ {% for i in task %}
+    <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{i.image.url}}" height="200px" width="200px" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <p class="card-text">{{i.desc}}</p>
+        <a href="{% url 'task4_app:detail' i.id  %}"  class="btn btn-primary">Get Details</a>
+      </div>
+    </div><br>
+    </div>
+ {% endfor %}
+
+    </div>
+</div>
+{% endblock %}
+
+<!--{% for i in task %}-->
+<!--  {{i.name}}<br>-->
+<!-- {{i.desc}}<br>-->
+<!-- <img src = "{{i.image.url}}" height="100px" width="100px" >-->
+<!--{% endfor %}-->
